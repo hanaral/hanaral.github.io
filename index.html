@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<link href="Inter/inter.css" rel="stylesheet">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			* {
+				font-family: 'Inter', sans-serif;
+				scroll-behavior: smooth;
+				box-sizing: border-box;
+				text-decoration: none;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				overflow-y: hidden;
+			}
+			img {
+				filter:opacity(0);
+				z-index:100;
+				grid-column-start:leftpadding;
+				grid-column-end:span 3;
+				animation: opacityshift 30s linear infinite;
+				height:100%;
+				width:100%;
+			}
+			#layout {
+				display:grid;
+				z-index:99;
+				grid-template-columns:[leftpadding] auto [centre] 600px [rightpadding] auto;
+				grid-template-rows:[toppadding] auto [centre] 600px [bottompadding] auto;
+				background-image:linear-gradient(0deg, #199EF3, #E4F8FF, #FFF9CB, #F89C69, #370648, #321957, #220E3E, #220E3E, #220E3E, #220E3E);
+				background-size: 1600% 1600%;
+				background-clip: padding-box;
+				animation: gradientshift 60s linear infinite;
+				width:100%;
+				height:100%;
+			}
+			#card {
+				grid-column-start:centre;
+				grid-column-end:rightpadding;
+				grid-row-start:centre;
+				grid-row-end:bottompadding;
+				width:100%;
+				height:100%;
+				display:grid;
+				grid-template-columns: [centre] 600px ;
+				grid-template-rows:[topbox] 400px [text] 200px;
+				border-radius:1em;
+				overflow:hidden;
+				box-shadow: 0 0.4em 1em 0.2em #00000025;
+				background-color:#FFFFFF10
+			}
+			.text {
+				grid-column-start:centre;
+				grid-column-end:span 1;
+				grid-row-start:text;
+				font-size: 1.75rem;
+				padding:auto;
+				font-weight: 900;
+				background:url(sig.png) #f1f1f1;
+				background-size:cover;
+				background-repeat:no-repeat;
+				background-size:600px 200px;
+			}
+			span {
+				line-height:50px;
+				margin-left:1.5%;
+				margin-right:1.5%;
+			}
+			b {
+				background-image: repeating-linear-gradient(45deg, #FFF9CB, #F89C69, #370648, #321957);
+				background-size: 800% 800%;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				animation: gradientshift 8s ease infinite;
+			}
+			#day {
+				grid-column-start:centre;
+				grid-column-end:span 1;
+				grid-row-start:topbox;
+				grid-row-end:text;
+				background:url(day1.png);
+				margin:0;
+				height:600px;
+				width:800px;
+				background-size:cover;
+				background-repeat:no-repeat;
+				background-size:600px 400px;
+			}
+			#night {
+				grid-column-start:centre;
+				grid-column-end:span 1;
+				grid-row-start:topbox;
+				grid-row-end:text;
+				background:url(day2.png);
+				animation: opacityshift 60s linear infinite;
+				margin:0;
+				height:400px;
+				width:600px;
+				background-size:cover;
+				background-repeat:no-repeat;
+				background-size:600px 400px; 
+			}
+			.feedbackbtn {
+				font-weight:700;
+				color:#abacae;
+			}
+
+			.feedbackbtn:hover {
+				background-image:repeating-linear-gradient(45deg, #C23B23, #F39A27, #EADA52, #03C03C, #579ABE, #976ED7, #976ED7);
+				background-size: 800% 800%;
+				background-clip: padding-box;
+				animation: gradientshift 8s ease infinite;
+			}
+
+			@keyframes opacityshift {
+				0% {
+					opacity: 0;
+				}
+
+				50% {
+					opacity: 1;
+				}
+
+				100% {
+					opacity: 0;
+				}
+			}
+
+			@keyframes gradientshift {
+				0% {
+					background-position: 0% 50%
+				}
+
+				50% {
+					background-position: 100% 25%
+				}
+
+				100% {
+					background-position: 0% 50%
+				}
+			}
+
+		</style>
+	</head>
+	<body id="start">
+		<grid id="layout">
+				<grid id="card">
+					<div id="day"><div id="night"></div></div>
+					<div class="text">
+						<span>Doğum günün <b>çoook</b> kutlu ve mutlu olsun</span>
+					</div>
+				</grid>
+		</grid>
+	</body>
+</html>
