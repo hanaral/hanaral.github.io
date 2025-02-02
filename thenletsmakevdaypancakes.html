@@ -38,7 +38,7 @@
     <div style="position: absolute; top: 141px; left: 103px;" class="timer" id="timer">1:00</div>
 
     <script>
-        let timeLeft = 60; // 3 minutes in seconds
+        let timeLeft = 60; 
         let timerInterval;
 
         function startTimer() {
@@ -51,7 +51,7 @@
                     if (timeLeft <= 0) {
                         clearInterval(timerInterval);
                         timerInterval = null;
-                        document.getElementById("timer").innerText = "Pancakes done!";
+                        document.getElementById("timer").innerText = "FLIP!";
                     }
 
                     timeLeft--;
