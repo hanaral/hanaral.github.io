@@ -26,12 +26,12 @@
     <script src="javascripts/scale.fix.js"></script>
     <script>
       let viewer = $3Dmol.createViewer("mol-viewer", {
-      backgroundColor: 'transparent'
+        backgroundColor: '#dedede'
       });
       $3Dmol.download("url:MolView.mol", viewer, {format: 'mol'}, function() {
-      viewer.setStyle({}, { stick: {}, sphere: { scale: 0.3 } });
-      viewer.render();
+        viewer.setStyle({}, { stick: {}, sphere: { scale: 0.3 } });
+        viewer.render();
       });
-  </script>
+    </script>
   </body>
 </html>
