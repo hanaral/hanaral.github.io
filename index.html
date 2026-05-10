@@ -1,87 +1,33 @@
-<!-- ...existing code... -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>valentines?</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-    @font-face {
-    font-family: 'Raster Forge';
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-        .timer {
-    color: black;
-    font-size: 1em;
-    margin: 20px;
-    font-family: 'inter', sans-serif;
-        }
-
-    </style>
-</head>
-<body>
-<section class=grid main>
-    <div>
-
-
-    <section class="card">
-            <img style="width: 300px; display: block; margin: 0 auto;" src="https://www.sanrio.co.jp/wp-content/uploads/2022/06/list-mysweetpiano.png">
-            <div style="    background-color: #fff185;
-            border: 1px solid rgba(0, 0, 0, 0.125);
-            padding: 4px;
-            width: 40px;
-            border-radius: 1.6em;
-            position: relative; top: -110px; left: 130px;" class="timer" id="timer">0:30</div>
-            <h2 class="h1" style="color: #ff69b4; margin: 1em 1em 0em 1em;">Dear 最小coconut beibao </h2>
-        
-    <h1 class="rainbow-text" style="margin: 0 0 1em 0.15em; position: absolute;">happy V day!</h1>
-    <h1 style="margin: 0 0 1em 0.15em;">   </h1>
-    <p  style="color: #ff69b4; margin: 1em 1em 0em 1em;">It's been a long 13+4 months tht we've been dating and I'm grateful to both you and God that things turned out the way they did.
-        I hope you can forgive the underwhelming V day and C day gifts; I tried 我的 best with what I had bah.
-        <p style="color: #ff69b4; margin: 1em 1em 0em 1em;">As always, ilym</p>
-        <p style="color: #ff69b4; margin: 1em 1em 0em 1em;">From 你的 very busy bb</p>
-        <p  style="color: #ff69b4; margin: 1em 1em 0em 1em;">—Han</p>
-
-    <div class="button" onclick="startTimer()">
-        
-
-    <p> </p>
-   </section>
-
-
-</section>    </div>
-
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>...A belated 600 days</title>
+    
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://3dmol.org"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h3><i>To bb</i></h3>
+      </header>
+      <section>
+        <h1>Happy belated 600-ish days</h1>
+        <p><em>İ love you very much (=more).</em> BB is my...</p>
+          <div style="height: 400px; width: 400px; position: relative;" 
+          class='viewer_3Dmoljs' 
+          data-url='MolView.mol' 
+          data-datatype='mol' 
+          data-backgroundcolor='#dedede' 
+          data-style='stick'></div>
+      </section>
     </div>
-
-    
-    
-
-    <script>
-        let timeLeft = 30; 
-        let timerInterval;
-
-        function startTimer() {
-            if (!timerInterval) {
-                timerInterval = setInterval(() => {
-                    let seconds = timeLeft;
-                    document.getElementById("timer").innerText = 0 + ":" + (seconds < 10 ? "0" : "") + seconds;
-                    
-                    if (timeLeft <= 0) {
-                        clearInterval(timerInterval);
-                        timerInterval = null;
-                        document.getElementById("timer").innerHTML = "<a class='rainbow-text' href='https://www.gu-global.com/jp/ja/products/E358560-000/00?colorDisplayCode=01&sizeDisplayCode=004'>click me!</a>";
-                    }
-
-                    timeLeft--;
-                }, 1000);
-            }
-        }
-
-
-    </script>
-
-</body>
+    <footer>
+     <!-- <p><i>Here's to another 600(+)!</i></p> -->
+    </footer>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
 </html>
